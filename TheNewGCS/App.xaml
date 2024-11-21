@@ -1,0 +1,9 @@
+﻿<Application x:Class="TheNewGCS.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TheNewGCS"
+             StartupUri="Views/DroneScreenView.xaml">
+    <Application.Resources>
+         <ResourceDictionary Source="Resources/Styles/BlackColorTheme.xaml"></ResourceDictionary>
+    </Application.Resources>
+</Application>

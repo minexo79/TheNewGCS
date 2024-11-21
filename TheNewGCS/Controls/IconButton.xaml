@@ -1,0 +1,12 @@
+﻿<Button x:Class="TheNewGCS.Controls.IconButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:TheNewGCS.Controls"
+             xmlns:materialIcons="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF"
+             mc:Ignorable="d"
+             Style="{StaticResource BaseStyle}"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <materialIcons:MaterialIcon Grid.Row="0" Kind="{Binding Path=Icon}" Margin="5" />
+</Button>
