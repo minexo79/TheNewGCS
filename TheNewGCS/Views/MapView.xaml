@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:maps="clr-namespace:Mapsui.UI.Wpf;assembly=Mapsui.UI.Wpf"
              xmlns:local="clr-namespace:TheNewGCS.Views"
-             xmlns:controls="clr-namespace:TheNewGCS.Controls"
+             xmlns:controls="clr-namespace:TheNewGCS.Controls" 
              mc:Ignorable="d"
              Style="{StaticResource BaseStyle}"
              d:DesignHeight="600" d:DesignWidth="1024">

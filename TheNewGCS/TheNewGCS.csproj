@@ -10,8 +10,17 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <None Remove="Resources\Images\no-video.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
       <PackageReference Include="Mapsui.Wpf" Version="4.1.8" />
       <PackageReference Include="Material.Icons.WPF" Version="2.1.10" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Resource Include="Resources\Images\no-video.png" />
     </ItemGroup>
 
     <ItemGroup>

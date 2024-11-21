@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TheNewGCS.ViewModels;
 
 namespace TheNewGCS.Views;
 
@@ -16,8 +17,12 @@ namespace TheNewGCS.Views;
 /// </summary>
 public partial class DroneScreenView : Window
 {
+    DroneScreenViewModel droneScreenViewModel = new DroneScreenViewModel();
+
     public DroneScreenView()
     {
         InitializeComponent();
+
+        this.DataContext = droneScreenViewModel;
     }
 }

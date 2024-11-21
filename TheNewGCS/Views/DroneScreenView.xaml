@@ -46,7 +46,32 @@
             <local:HoriStatusView Grid.Column="3" StatusType="ArrowLeftRightBold" />
             <local:HoriStatusView Grid.Column="4" StatusType="ClockTimeFive" />
         </Grid>
-        <!-- Map -->
-        <local:MapView Grid.Row="2" />
+        <!-- Map / Camera -->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="7*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="6*" />
+                <RowDefinition Height="4*" />
+            </Grid.RowDefinitions>
+            <Frame x:Name="frameBigScreen" NavigationUIVisibility="Hidden" 
+                   Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2"
+                   Content="{Binding FrameBigScreenContent}" />
+            <Grid Grid.Column="0" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Right"
+                            Background="{StaticResource myBackground}">
+                    <controls:IconButton Icon="Minimize" />
+                    <controls:IconButton Icon="WindowMaximize" Command="{Binding ChangeScreenCommand}"  />
+                </StackPanel>
+                <Frame Grid.Row="1" x:Name="frameTinyScreen" NavigationUIVisibility="Hidden"
+                       Content="{Binding FrameTinyScreenContent}" />
+            </Grid>
+        </Grid>
     </Grid>
 </Window>

@@ -1,36 +1,38 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Controls;
+using TheNewGCS.ViewModels;
 
 namespace TheNewGCS.Views;
 
-public partial class VertStatusView : UserControl, INotifyPropertyChanged
+public partial class VertStatusView : UserControl
 {
-    private string _statusValue = "N/A";
-    public string StatusValue
-    {
-        get => _statusValue;
-        set { _statusValue = value; OnPropertyChanged(nameof(StatusValue)); }
-    }
-    
-    private string _statusType = "N/A";
+    StatusViewModel statusViewModel = new StatusViewModel();
+
     public string StatusType
     {
-        get => _statusType;
-        set { _statusType = value; OnPropertyChanged(nameof(StatusType)); }
+        get => statusViewModel.StatusType;
+        set
+        {
+            statusViewModel.StatusType = value;
+        }
     }
-    
-    public event PropertyChangedEventHandler? PropertyChanged;
-    protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
+
+    public string StatusValue
     {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        get => statusViewModel.StatusValue;
+        set
+        {
+            statusViewModel.StatusValue = value;
+        }
     }
-    
+
+
     public VertStatusView()
     {
         InitializeComponent();
 
-        StatusGrid.DataContext = this;
+        StatusGrid.DataContext = statusViewModel;
     }
 
 }

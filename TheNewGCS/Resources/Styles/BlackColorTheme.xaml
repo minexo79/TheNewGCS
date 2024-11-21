@@ -1,11 +1,13 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:materialIcons="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF">
+    <SolidColorBrush x:Key="myBackground" Color="#202020" />
+    <SolidColorBrush x:Key="myDarkBackground" Color="Black" />
     <!-- Default Style -->
     <Style x:Key="BaseStyle">
-        <Setter Property="UserControl.Background" Value="Black" />
+        <Setter Property="UserControl.Background" Value="{StaticResource myDarkBackground}" />
         <Setter Property="UserControl.Foreground" Value="White" />
-        <Setter Property="UserControl.BorderBrush" Value="Black" />
+        <Setter Property="UserControl.BorderBrush" Value="{StaticResource myDarkBackground}" />
         <Setter Property="UserControl.BorderThickness" Value="0" />
     </Style>
     <!-- StatusView Style -->

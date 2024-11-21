@@ -3,10 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:TheNewGCS.Views"
-             mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="300">
+             xmlns:local="clr-namespace:TheNewGCS.Views" 
+             xmlns:controls="clr-namespace:TheNewGCS.Controls" 
+             mc:Ignorable="d" Background="#222222"
+             d:DesignHeight="600" d:DesignWidth="1024">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical" Width="64" Margin="10" Visibility="{Binding IsMaximize}" Panel.ZIndex="1"
+                    Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <controls:IconButton Icon="CameraOutline" Style="{StaticResource ToolsButtonStyle}" Height="86" />
+            <controls:IconButton Icon="RecordCircleOutline" Style="{StaticResource ToolsButtonStyle}" Height="86" />
+        </StackPanel>
+        <Canvas x:Name="videoDisplayScreen" 
+                Grid.Column="0" Panel.ZIndex="0">
+            <Canvas.Background>
+                <ImageBrush ImageSource="pack://application:,,,/TheNewGCS;component/Resources/Images/no-video.png"  Stretch="None" />
+            </Canvas.Background>
+        </Canvas>
     </Grid>
 </UserControl>
